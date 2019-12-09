@@ -50,6 +50,13 @@ function specificSlide(slideNumber) {
   showSlide(currentSlide);
 }
 
+// Select the prev button and add an event listener
+// that calls your function to decrease the slide number when clicked
+document.querySelector('.prev').addEventListener('click', decreaseSlide);
+// Select the next button and add an event listener
+// that calls your function to increase the slide number when clicked
+document.querySelector('.next').addEventListener('click', increaseSlide);
+
 // don't forget to call your showSlide function on initial page load
 showSlide(currentSlide);
 
