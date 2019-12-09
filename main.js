@@ -3,7 +3,7 @@ let currentSlide = 1;
 
 // create a function called showSlide that takes 1 argument called slideNumber
 function showSlide(slideNumber) {
-  // select all DOM elements with the class 'slides' and store them in a variable
+  // select all DOM elements with the class 'slide' and store them in a variable
   const slides = document.querySelectorAll('.slide');
   // select all DOM elements with the class 'dot' and store them in a variable
   const dots = document.querySelectorAll('.dot');
@@ -12,7 +12,7 @@ function showSlide(slideNumber) {
   if (slideNumber > slides.length) {
     currentSlide = 1;
   }
-  // if the slide number is less than 0, set it to the number of the last slide
+  // if the slide number is less than 1, set it to the number of the last slide
   if (slideNumber < 1) {
     currentSlide = slides.length;
   }
@@ -26,25 +26,25 @@ function showSlide(slideNumber) {
     dot.classList.remove('active');
   });
 
-  // set the current slide to display block
+  // set the current slide to display: block
   slides[currentSlide - 1].style.display = 'block';
   // add the 'active' class to the current dot
   dots[currentSlide - 1].classList.add('active');
 }
 
-// write a function to increase the current slide number by 1
+// write a function to increase the current slide number by 1 and show the new slide
 function increaseSlide() {
   currentSlide += 1;
   showSlide(currentSlide);
 }
 
-// write a function to decrease the current slide number by 1
+// write a function to decrease the current slide number by 1 and show the new slide
 function decreaseSlide() {
   currentSlide -= 1;
   showSlide(currentSlide);
 }
 
-// write a function to set the current slide to a specific number
+// write a function to set the current slide to a specific number and show the new slide
 function specificSlide(slideNumber) {
   currentSlide = slideNumber;
   showSlide(currentSlide);
