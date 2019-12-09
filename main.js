@@ -21,4 +21,10 @@ function decreaseSlide() {}
 // write a function to set the current slide to a specific number and show the new slide
 function specificSlide(slideNumber) {}
 
+// Select the prev button and add an event listener
+// that calls your function to decrease the slide number when clicked
+
+// Select the next button and add an event listener
+// that calls your function to increase the slide number when clicked
+
 // don't forget to call your showSlide function on initial page load
